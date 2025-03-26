@@ -1,0 +1,21 @@
+{
+  "name": "cursoseri",
+  "version": "1.0.0",
+  "description": "Proyecto de Desarrollo donde atreves de una api voy elaborar cursos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BR1ANJ3Sus3B/CursosEri.git"
+  },
+  "keywords": [],
+  "author": "Eriandi Iturbide Bautista ",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/BR1ANJ3Sus3B/CursosEri/issues"
+  },
+  "homepage": "https://github.com/BR1ANJ3Sus3B/CursosEri#readme"
+}
