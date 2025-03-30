@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Maquillaje</title>
+    <link rel="stylesheet" href="Cursos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Basic makeup</h1>
+            <p>Todo lo que necesitas saber sobre el maquillaje</p>
+            <button id="logout-btn" onclick="logout()">Cerrar sesión</button>
+
+
+        </header>
+        
+        <nav>
+            <ul>
+                <li><button onclick="showTopic('intro')">¿Qué es el maquillaje?</button> <span class="completed-checkbox" id="checkbox_intro"></span></li>
+                <li><button onclick="showTopic('comenzar')">¿Cómo empezar a maquillarse?</button> <span class="completed-checkbox" id="checkbox_comenzar"></span></li>
+                <li><button onclick="showTopic('base')">Base del Maquillaje</button> <span class="completed-checkbox" id="checkbox_base"></span></li>
+                <li><button onclick="showTopic('corrector')">Corrector</button> <span class="completed-checkbox" id="checkbox_corrector"></span></li>
+                <li><button onclick="showTopic('polvo')">Polvo</button> <span class="completed-checkbox" id="checkbox_polvo"></span></li>
+                <li><button onclick="showTopic('rubor')">Rubor</button> <span class="completed-checkbox" id="checkbox_rubor"></span></li>
+                <li><button onclick="showTopic('ojos')">Maquillaje de Ojos</button> <span class="completed-checkbox" id="checkbox_ojos"></span></li>
+                <li><button onclick="showTopic('labios')">Maquillaje de Labios</button> <span class="completed-checkbox" id="checkbox_labios"></span></li>
+                <li><button onclick="showTopic('fijacion')">Fijación del Maquillaje</button> <span class="completed-checkbox" id="checkbox_fijacion"></span></li>
+                <li><button onclick="showTopic('tiposPiel')">Cómo elegir el maquillaje según tu tipo de piel</button> <span class="completed-checkbox" id="checkbox_tiposPiel"></span></li>
+                <li><button onclick="showTopic('tecnicasAvanzadas')">Técnicas de Maquillaje Avanzadas</button> <span class="completed-checkbox" id="checkbox_tecnicasAvanzadas"></span></li>
+                <li><button onclick="showTopic('tendencias')">Tendencias Actuales en Maquillaje</button> <span class="completed-checkbox" id="checkbox_tendencias"></span></li>
+                <li><button onclick="showTopic('erroresComunes')">Errores Comunes en Maquillaje</button> <span class="completed-checkbox" id="checkbox_erroresComunes"></span></li>
+                <li><button onclick="showTopic('ocasiones')">Maquillaje para Diferentes Ocasiones</button> <span class="completed-checkbox" id="checkbox_ocasiones"></span></li>
+            </ul>
+        </nav>
+        
+        <section id="content">
+            <!-- Introducción -->
+            <div id="intro" class="topic">
+                <h2>¿Qué es el maquillaje?</h2>
+                <p>El maquillaje es el arte de embellecer el rostro con productos cosméticos, mejorando características y disimulando imperfecciones. Es una forma de expresión personal que permite resaltar lo mejor de nuestra belleza natural.</p>
+            </div>
+            
+            <!-- Cómo empezar -->
+            <div id="comenzar" class="topic">
+                <h2>¿Cómo empezar a maquillarse?</h2>
+                <p>Para comenzar, necesitas las herramientas adecuadas y los productos que se adapten a tu tipo de piel. Asegúrate de tener una base, corrector, polvo, rubor y otros productos esenciales. El primer paso es siempre limpiar bien tu rostro e hidratarlo antes de aplicar cualquier maquillaje.</p>
+            </div>
+            
+            <!-- Base del Maquillaje -->
+            <div id="base" class="topic">
+                <h2>Base del Maquillaje</h2>
+                <p>La base es esencial para unificar el tono de la piel. Elige una que se adapte a tu tipo de piel (seca, mixta o grasa). Aplícala con una brocha, esponja o tus manos, asegurándote de difuminar bien en el cuello para evitar líneas visibles. La base puede ser líquida, en crema o en polvo, dependiendo del acabado que desees.</p>
+                <p><strong>Consejo:</strong> Si tienes la piel seca, busca bases hidratantes, y si tienes piel grasa, elige fórmulas mate.</p>
+            </div>
+            
+            <!-- Corrector -->
+            <div id="corrector" class="topic">
+                <h2>Corrector</h2>
+                <p>El corrector se usa para cubrir imperfecciones específicas como manchas, ojeras y granitos. Aplica una pequeña cantidad en las áreas problemáticas y difumina bien. Si tienes ojeras, elige un corrector con un tono ligeramente más claro que tu piel para iluminar la zona.</p>
+                <p><strong>Consejo:</strong> Usa un corrector de textura ligera para el área de los ojos y uno más cremoso para otras imperfecciones.</p>
+            </div>
+            
+            <!-- Polvo -->
+            <div id="polvo" class="topic">
+                <h2>Polvo</h2>
+                <p>El polvo se utiliza para sellar la base y evitar que el maquillaje se deslice durante el día. Puedes optar por un polvo suelto para un acabado más natural o uno compacto para mayor cobertura. Aplica con una brocha grande en las áreas donde tiendes a brillar, como la zona T.</p>
+                <p><strong>Consejo:</strong> Si tienes la piel seca, utiliza polvo traslúcido en lugar de polvo compacto para evitar resecar la piel.</p>
+            </div>
+            
+            <!-- Rubor -->
+            <div id="rubor" class="topic">
+                <h2>Rubor</h2>
+                <p>El rubor agrega color a las mejillas y da un toque de frescura al rostro. Aplica el rubor en las mejillas, y difumina bien para que se vea natural. Los rubores en crema son ideales para pieles secas, mientras que los en polvo funcionan bien para pieles normales o grasas.</p>
+                <p><strong>Consejo:</strong> El rubor debe aplicarse según la forma de tu rostro. Si tienes un rostro redondo, opta por aplicarlo de manera diagonal para alargar el rostro.</p>
+            </div>
+            
+            <!-- Maquillaje de Ojos -->
+            <div id="ojos" class="topic">
+                <h2>Maquillaje de Ojos</h2>
+                <p>El maquillaje de ojos incluye sombras, delineador y máscara de pestañas. Elige tonos que resalten el color de tus ojos. Aplica una sombra clara en el párpado móvil y una más oscura en la cuenca para dar profundidad. El delineador puede usarse en la línea superior e inferior de las pestañas, y la máscara de pestañas ayuda a abrir la mirada.</p>
+                <p><strong>Consejo:</strong> Si quieres un look más dramático, opta por un delineado en cat-eye o smoky eyes.</p>
+            </div>
+            
+            <!-- Maquillaje de Labios -->
+            <div id="labios" class="topic">
+                <h2>Maquillaje de Labios</h2>
+                <p>Los labios pueden ser el centro de atención en tu maquillaje. Usa un lápiz labial o gloss que combine con tu look. Si quieres un acabado duradero, utiliza un delineador de labios antes del labial para evitar que se corra.</p>
+                <p><strong>Consejo:</strong> Exfolia tus labios antes de aplicar el maquillaje para que el labial se vea más suave y uniforme.</p>
+            </div>
+
+            <!-- Fijación del Maquillaje -->
+            <div id="fijacion" class="topic">
+                <h2>Fijación del Maquillaje</h2>
+                <p>Una vez que hayas terminado tu maquillaje, es importante fijarlo para que dure todo el día. Puedes usar un spray fijador para asegurar que todo se mantenga en su lugar. Rocíalo a una distancia de 30 cm de tu rostro y deja secar de forma natural.</p>
+                <p><strong>Consejo:</strong> Si tienes la piel grasa, busca fijadores matificantes para controlar el brillo durante el día.</p>
+            </div>
+            
+            <!-- Cómo elegir el maquillaje según tu tipo de piel -->
+            <div id="tiposPiel" class="topic">
+                <h2>Cómo elegir el maquillaje según tu tipo de piel</h2>
+                <p><strong>Piel seca:</strong> Usa bases hidratantes, correctores cremosos y rubores en crema.</p>
+                <p><strong>Piel grasa:</strong> Opta por bases mate y polvos traslúcidos.</p>
+                <p><strong>Piel mixta:</strong> Productos equilibrados como bases líquidas ligeras y polvos ligeros en la zona T.</p>
+            </div>
+
+            <!-- Técnicas avanzadas -->
+            <div id="tecnicasAvanzadas" class="topic">
+                <h2>Técnicas de Maquillaje Avanzadas</h2>
+                <p><strong>Contorneado:</strong> Aplica productos oscuros en las áreas que quieras definir y claros en las que quieras resaltar.</p>
+                <p><strong>Iluminador:</strong> Resalta las áreas altas de tu rostro como los pómulos, nariz y arco de Cupido.</p>
+                <p><strong>Difuminado:</strong> Difumina bien todos los productos para evitar líneas marcadas y lograr un acabado profesional.</p>
+            </div>
+
+            <!-- Tendencias actuales -->
+            <div id="tendencias" class="topic">
+                <h2>Tendencias Actuales en Maquillaje</h2>
+                <p><strong>Maquillaje Natural:</strong> Base ligera y productos suaves para un look fresco y limpio.</p>
+                <p><strong>Maquillaje de Ojos Dramáticos:</strong> Delineado marcado y sombras metálicas para un efecto impactante.</p>
+                <p><strong>Maquillaje Glow:</strong> Iluminadores y acabados brillantes para un rostro radiante.</p>
+            </div>
+
+            <!-- Errores comunes -->
+            <div id="erroresComunes" class="topic">
+                <h2>Errores Comunes en el Maquillaje</h2>
+                <p><strong>No usar el tono correcto de base:</strong> Prueba la base en tu mandíbula para encontrar el tono adecuado.</p>
+                <p><strong>Exceso de producto:</strong> Aplica capas finas de producto y difumina bien.</p>
+                <p><strong>No preparar la piel adecuadamente:</strong> Limpiar e hidratar es esencial para un buen acabado.</p>
+            </div>
+
+            <!-- Maquillaje para diferentes ocasiones -->
+            <div id="ocasiones" class="topic">
+                <h2>Maquillaje para Diferentes Ocasiones</h2>
+                <p><strong>Maquillaje de Día:</strong> Natural y ligero, con base ligera y un toque de rubor y máscara de pestañas.</p>
+                <p><strong>Maquillaje de Noche:</strong> Más dramático con sombras oscuras, delineado marcado y labial intenso.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Curso de Maquillaje</p>
+        </footer>
+
+        <div id="certificado" style="display: none;">
+            <div class="card">
+                <div class="card-header">
+                    <h3>¡Felicidades!</h3>
+                </div>
+                    <div class="card-body">
+                        <p>Has completado todos los temas del curso. ¡Excelente trabajo!</p>
+                        <p>Te vamos hacer unas preguntas para resivir su certificado</p>
+                        <button id="btnCertificado">formulario</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        console.log("brian.js se ha cargado correctamente");
+        function logout() {
+            window.location.href = "index.html"; // Cambia "index.html" por la URL de la página a la que quieres redirigir.
+        }
+        
+        window.showTopic = function(topicId) {
+            document.querySelectorAll('.topic').forEach(topic => topic.style.display = 'none');
+            const selectedTopic = document.getElementById(topicId);
+            if (selectedTopic) {
+                selectedTopic.style.display = 'block';
+            }
+            var topicCheckbox = document.getElementById('checkbox_' + topicId);
+            if (topicCheckbox) {
+                topicCheckbox.classList.toggle('checked');
+            }
+            checkCompletion();
+        };
+
+        function checkCompletion() {
+            const topics = ['intro', 'comenzar', 'base', 'corrector', 'polvo', 'rubor', 'ojos', 'labios'];
+            let allCompleted = topics.every(topic => document.getElementById('checkbox_' + topic)?.classList.contains('checked'));
+            document.getElementById('certificado').style.display = allCompleted ? 'block' : 'none';
+        }
+
+        document.querySelectorAll('.completed-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('click', function() {
+                this.classList.toggle('checked');
+                checkCompletion();
+            });
+        });
+        document.getElementById("btnCertificado").addEventListener("click", function() {
+            window.location.href = "Form.html"; // Cambia esto por la URL de tu formulario
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación del Curso de Maquillaje</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Evaluación del Curso de Maquillaje</h1>
+            <p>Responde las siguientes preguntas y descubre cuántas acertaste.</p>
+        </header>
+
+        <form id="quizForm">
+            <div class="question">
+                <p>1. ¿Para qué se usa el corrector?</p>
+                <label><input type="radio" name="q1" value="incorrecto"> Para fijar el maquillaje</label>
+                <label><input type="radio" name="q1" value="correcto"> Para cubrir imperfecciones</label>
+                <label><input type="radio" name="q1" value="incorrecto"> Para dar color a los labios</label>
+            </div>
+
+            <div class="question">
+                <p>2. ¿Qué tipo de base es mejor para piel grasa?</p>
+                <label><input type="radio" name="q2" value="correcto"> Base mate</label>
+                <label><input type="radio" name="q2" value="incorrecto"> Base hidratante</label>
+                <label><input type="radio" name="q2" value="incorrecto"> Base cremosa</label>
+            </div>
+
+            <div class="question">
+                <p>3. ¿Cuál es el propósito del polvo en el maquillaje?</p>
+                <label><input type="radio" name="q3" value="incorrecto"> Para dar brillo a la piel</label>
+                <label><input type="radio" name="q3" value="correcto"> Para sellar la base</label>
+                <label><input type="radio" name="q3" value="incorrecto"> Para hidratar la piel</label>
+            </div>
+
+            <div class="question">
+                <p>4. ¿Qué producto se usa para dar color a las mejillas?</p>
+                <label><input type="radio" name="q4" value="correcto"> Rubor</label>
+                <label><input type="radio" name="q4" value="incorrecto"> Corrector</label>
+                <label><input type="radio" name="q4" value="incorrecto"> Iluminador</label>
+            </div>
+
+            <div class="question">
+                <p>5. ¿Cuál es el primer paso antes de aplicar maquillaje?</p>
+                <label><input type="radio" name="q5" value="correcto"> Limpiar e hidratar la piel</label>
+                <label><input type="radio" name="q5" value="incorrecto"> Aplicar base directamente</label>
+                <label><input type="radio" name="q5" value="incorrecto"> Usar polvo compacto</label>
+            </div>
+
+            <div class="question">
+                <p>6. ¿Qué se usa para resaltar ciertas áreas del rostro?</p>
+                <label><input type="radio" name="q6" value="incorrecto"> Base</label>
+                <label><input type="radio" name="q6" value="correcto"> Iluminador</label>
+                <label><input type="radio" name="q6" value="incorrecto"> Rubor</label>
+            </div>
+
+            <div class="question">
+                <p>7. ¿Qué técnica ayuda a definir el rostro con tonos oscuros y claros?</p>
+                <label><input type="radio" name="q7" value="correcto"> Contorneado</label>
+                <label><input type="radio" name="q7" value="incorrecto"> Difuminado</label>
+                <label><input type="radio" name="q7" value="incorrecto"> Fijación</label>
+            </div>
+
+            <div class="question">
+                <p>8. ¿Qué producto ayuda a que el maquillaje dure más tiempo?</p>
+                <label><input type="radio" name="q8" value="correcto"> Spray fijador</label>
+                <label><input type="radio" name="q8" value="incorrecto"> Corrector</label>
+                <label><input type="radio" name="q8" value="incorrecto"> Rubor</label>
+            </div>
+
+            <div class="question">
+                <p>9. ¿Qué tono de corrector se recomienda para ojeras?</p>
+                <label><input type="radio" name="q9" value="correcto"> Un tono más claro que la piel</label>
+                <label><input type="radio" name="q9" value="incorrecto"> El mismo tono que la base</label>
+                <label><input type="radio" name="q9" value="incorrecto"> Un tono más oscuro</label>
+            </div>
+
+            <div class="question">
+                <p>10. ¿Cómo se debe aplicar la base para evitar líneas visibles?</p>
+                <label><input type="radio" name="q10" value="incorrecto"> Solo en el centro del rostro</label>
+                <label><input type="radio" name="q10" value="correcto"> Difuminándola bien hacia el cuello</label>
+                <label><input type="radio" name="q10" value="incorrecto"> Aplicándola en capas gruesas</label>
+            </div>
+
+            <button type="submit">Enviar respuestas</button>
+        </form>
+
+        <div id="result" style="display: none;">
+            <h2>Resultados</h2>
+            <p id="score"></p>
+            <div id="certificateMessage"></div>
+            <button onclick="goBackToCourse()">⬅️ Regresar al curso</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("quizForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let correctAnswers = 0;
+            
+            const answers = document.querySelectorAll("input[type=radio]:checked");
+            answers.forEach(answer => {
+                if (answer.value === "correcto") {
+                    correctAnswers++;
+                }
+            });
+
+            const scoreText = `Has acertado ${correctAnswers} de 10 preguntas.`;
+            document.getElementById("score").innerText = scoreText;
+
+            const certificateMessage = document.getElementById("certificateMessage");
+            if (correctAnswers >= 5) {
+                certificateMessage.innerHTML = `
+                    <p>🎉 ¡Felicidades! Has aprobado la evaluación.</p>
+                    <button onclick="generateCertificate()">Te mandaremos tu cerficado por correo
+
+                    </button>
+                `;
+            } else {
+                certificateMessage.innerHTML = `
+                    <p>❌ No has alcanzado el puntaje mínimo para obtener el certificado. ¡Sigue practicando y vuelve a intentarlo!</p>
+                `;
+            }
+
+            document.getElementById("result").style.display = "block";
+        });
+
+        function generateCertificate() {
+            alert("¡Corfirmado !");
+            // Aquí puedes agregar funcionalidad para generar un PDF o abrir una página de descarga.
+        }
+
+        function goBackToCourse() {
+            window.location.href = "Cursos.html"; // Cambia esto con la URL correcta del curso
+        }
+    </script>
+</body>
+</html>

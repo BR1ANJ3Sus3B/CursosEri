@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #ff66b2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav ul li button {
+    background-color: #ff66b2;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+nav ul li button:hover {
+    background-color: #ff3385;
+}
+
+#content {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.topic {
+    display: none;
+    padding: 15px;
+}
+
+footer {
+    text-align: center;
+    background-color: #ff66b2;
+    padding: 10px;
+    color: white;
+    margin-top: 20px;
+}
+.completed-checkbox {
+    margin-right: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 4px;
+    position: relative;
+}
+
+.completed-checkbox.checked {
+    background-color: #4CAF50;
+}
+
+.completed-checkbox.checked::after {
+    content: '→';
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    font-size: 16px;
+}
+
+.topic {
+    margin-bottom: 30px;
+}
+
+.topic h2 {
+    font-size: 24px;
+}
+
+.topic p {
+    font-size: 16px;
+}
+
+.topic button {
+    margin-right: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+#certificado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Mantiene el certificado centrado en pantallas más pequeñas */
+    padding: 20px;
+}
+
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%;
+    max-width: 400px; /* Ancho máximo de la card */
+    padding: 20px;
+    text-align: center;
+}
+
+.card-header h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card-body p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#btnCertificado {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Texto blanco */
+    padding: 15px 32px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border: none; /* Sin bordes */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano */
+    transition: background-color 0.3s ease; /* Transición suave */
+    width: 100%;
+}
+
+#btnCertificado:hover {
+    background-color: #dd38dd; /* Color de fondo cuando pasa el ratón */
+}
+
+#btnCertificado:focus {
+    outline: none; /* Quita el borde al hacer clic */
+}
+
+#btnCertificado:active {
+    transform: scale(0.98); /* Efecto de presionar el botón */
+}
+#logout-btn {
+    background-color: #ff3333; /* Rojo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    width: fit-content;
+}
+
+#logout-btn:hover {
+    background-color: #cc0000; /* Rojo más oscuro */
+}
+
+#logout-btn:focus {
+    outline: none;
+}
+
+#logout-btn:active {
+    transform: scale(0.98);
+}
